@@ -4,13 +4,13 @@ const path = require('path');
 module.exports = appInfo => {
   const config = {};
 
-  config.name = 'CNode技术社区';
+  config.name = 'Zhongxia Blog';
 
-  config.description = 'CNode：Node.js专业中文社区';
+  config.description = 'Summarize, record and grow';
 
-  config.site_logo = '/public/images/cnodejs_light.svg';
+  config.site_logo = 'http://p8x4ztqeg.bkt.clouddn.com/icon/icon.svg';
 
-  config.site_icon = '/public/images/cnode_icon_32.png';
+  config.site_icon = 'http://p8x4ztqeg.bkt.clouddn.com/icon/icon.svg';
 
   // debug 为 true 时，用于本地调试
   config.debug = true;
@@ -18,9 +18,9 @@ module.exports = appInfo => {
   // use for cookie sign key, should change to your own and keep security
   config.keys = appInfo.name + '_1519887194138_3450';
 
-  config.host = 'http://cnodejs.org';
+  config.host = 'http://blog.izhongxia.com';
 
-  config.session_secret = 'node_club_secret'; // 务必修改
+  config.session_secret = 'egg_blog_zhongxia'; // 务必修改
 
   // add your config here
   config.middleware = [ 'locals', 'authUser', 'blockUser', 'errorPage' ];
@@ -39,14 +39,14 @@ module.exports = appInfo => {
   config.mini_assets = process.env.EGG_MINI_ASSETS || false;
 
   // 版块
-  config.tabs = [[ 'share', '分享' ], [ 'ask', '问答' ], [ 'job', '招聘' ]];
+  config.tabs = [[ 'share', '分享' ], [ 'ask', '问答' ]];
 
   // RSS配置
   config.rss = {
-    title: 'CNode：Node.js专业中文社区',
-    link: 'http://cnodejs.org',
+    title: 'Zhongxia Blog: 记录、总结、成功',
+    link: 'http://blog.izhongxia.com',
     language: 'zh-cn',
-    description: 'CNode：Node.js专业中文社区',
+    description: 'Zhongxia BLog: 记录、总结、成长',
     // 最多获取的RSS Item数量
     max_rss_items: 50,
   };
@@ -55,10 +55,10 @@ module.exports = appInfo => {
 
   // 7牛的access信息，用于文件上传
   config.qn_access = {
-    accessKey: 'your access key',
-    secretKey: 'your secret key',
-    bucket: 'your bucket name',
-    origin: 'http://your qiniu domain',
+    accessKey: '8545_3lKyGrfZpxuJbrkrbDZxPgD15okDtQUIOgF',
+    secretKey: '1kLTTb0B3o2ZSosA6FJgl1l1KQ6uZEUcTczQSztV',
+    bucket: 'cms-fe',
+    origin: 'http://static.izhongxia.com',
     // 如果vps在国外，请使用 http://up.qiniug.com/ ，这是七牛的国际节点
     // 如果在国内，此项请留空
     uploadURL: 'http://xxxxxxxx',
@@ -150,7 +150,7 @@ module.exports = appInfo => {
   };
 
   config.topic = {
-    perDayPerUserLimitCount: 10,
+    perDayPerUserLimitCount: 100,
   };
 
   config.list_topic_count = 20;
@@ -158,7 +158,7 @@ module.exports = appInfo => {
   // 每个 IP 每天可创建用户数
   config.create_user_per_ip = 1000;
 
-  config.search = 'google'; // 'google', 'baidu', 'local'
+  config.search = 'local'; // 'google', 'baidu', 'local'
 
   config.security = {
     csrf: {
