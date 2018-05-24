@@ -6,7 +6,7 @@ module.exports = appInfo => {
 
   config.name = 'Zhongxia'
 
-  config.description = 'Zhongxia Blog | Summarize, record and grow'
+  config.description = 'Zhongxia Blog | 记录、总结、成长'
 
   // logo , 默认为 config.name
   config.site_logo = ''
@@ -44,7 +44,7 @@ module.exports = appInfo => {
 
   // RSS配置
   config.rss = {
-    title: 'Zhongxia Blog: 记录、总结、成功',
+    title: 'Zhongxia Blog: 记录、总结、成长',
     link: 'http://blog.izhongxia.com',
     language: 'zh-cn',
     description: 'Zhongxia BLog: 记录、总结、成长',
@@ -56,10 +56,10 @@ module.exports = appInfo => {
 
   // 7牛的access信息，用于文件上传
   config.qn_access = {
-    accessKey: '8545_3lKyGrfZpxuJbrkrbDZxPgD15okDtQUIOgF',
-    secretKey: '1kLTTb0B3o2ZSosA6FJgl1l1KQ6uZEUcTczQSztV',
-    bucket: 'cms-fe',
-    origin: 'http://static.izhongxia.com',
+    accessKey: 'test',
+    secretKey: 'test',
+    bucket: 'test',
+    origin: 'http://test.com',
     // 如果vps在国外，请使用 http://up.qiniug.com/ ，这是七牛的国际节点
     // 如果在国内，此项请留空
     uploadURL: 'http://xxxxxxxx'
@@ -95,7 +95,8 @@ module.exports = appInfo => {
 
   config.auth_cookie_name = 'node_club'
   config.admins = {
-    ADMIN_USER: true
+    ADMIN_USER: true,
+    zhongxia: true
   }
 
   config.siteFile = {
@@ -124,8 +125,8 @@ module.exports = appInfo => {
 
   // passport
   config.passportGithub = {
-    key: process.env.EGG_PASSPORT_GITHUB_CLIENT_ID || 'test',
-    secret: process.env.EGG_PASSPORT_GITHUB_CLIENT_SECRET || 'test'
+    key: process.env.EGG_PASSPORT_GITHUB_CLIENT_ID || '',
+    secret: process.env.EGG_PASSPORT_GITHUB_CLIENT_SECRET || ''
   }
 
   config.passportLocal = {
@@ -135,11 +136,11 @@ module.exports = appInfo => {
 
   // 邮箱配置
   config.mail_opts = {
-    host: 'smtp.126.com',
+    host: 'smtp.sina.com',
     port: 25,
     auth: {
-      user: 'club@126.com',
-      pass: 'club'
+      user: 'test@sina.com',
+      pass: 'test'
     },
     ignoreTLS: true
   }
@@ -150,8 +151,9 @@ module.exports = appInfo => {
     secret: process.env.EGG_ALINODE_SECRET || ''
   }
 
+  // 每日最该发帖数量
   config.topic = {
-    perDayPerUserLimitCount: 100
+    perDayPerUserLimitCount: 10
   }
 
   config.list_topic_count = 20
