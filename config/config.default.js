@@ -32,7 +32,7 @@ module.exports = appInfo => {
   }
 
   // 是否允许直接注册（否则只能走 github 的方式）
-  config.allow_sign_up = true
+  config.allow_sign_up = false
 
   // cdn host，如 http://cnodejs.qiniudn.com
   config.site_static_host = process.env.EGG_SITE_STATIC_HOST || '' // 静态文件存储域名
@@ -40,7 +40,7 @@ module.exports = appInfo => {
   config.mini_assets = process.env.EGG_MINI_ASSETS || false
 
   // 版块
-  config.tabs = [['share', '分享'], ['ask', '问答']]
+  config.tabs = [['share', '分享'], ['ask', '问答'], ['source', '源码解读'], ['dialy', '流水日记']]
 
   // RSS配置
   config.rss = {
