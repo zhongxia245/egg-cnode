@@ -4,7 +4,7 @@ const path = require('path')
 module.exports = appInfo => {
   const config = {}
 
-  config.name = 'Zhongxia'
+  config.name = 'Zhongxia Blog'
 
   config.description = 'Zhongxia Blog | 记录、总结、成长'
 
@@ -19,9 +19,9 @@ module.exports = appInfo => {
   // use for cookie sign key, should change to your own and keep security
   config.keys = appInfo.name + '_1519887194138_3450'
 
-  config.host = 'http://blog.izhongxia.com'
+  config.host = 'http://todo.izhongxia.com'
 
-  config.session_secret = 'egg_blog_zhongxia' // 务必修改
+  config.session_secret = 'egg_todo_zhongxia' // 务必修改
 
   // add your config here
   config.middleware = ['locals', 'authUser', 'blockUser', 'errorPage']
@@ -40,7 +40,7 @@ module.exports = appInfo => {
   config.mini_assets = process.env.EGG_MINI_ASSETS || false
 
   // 版块
-  config.tabs = [['share', '分享'], ['ask', '问答'], ['source', '源码解读'], ['dialy', '流水日记']]
+  config.tabs = [['share', '分享'], ['ask', '问答'], ['source', '源码'], ['dialy', '记账']]
 
   // RSS配置
   config.rss = {
