@@ -1,0 +1,8 @@
+{
+  "name": "egg-cnode",
+  "script": "./server.js",
+  "cwd": "./",
+  "env": {
+    "EGG_SERVER_ENV": "prod"
+  }
+}
