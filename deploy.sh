@@ -6,6 +6,6 @@ git pull --rebase origin master
 
 cnpm i --production
 
-pm2 restart izhongxia-api
+pm2 restart egg-cnode
 
 echo 'deploy success...'
